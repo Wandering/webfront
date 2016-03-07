@@ -1,6 +1,8 @@
 /**
  * Created by admin on 2016/3/4.
  */
+var app = angular.module('busApp', []);
+app.controller('IndexController', ['$scope', function($scope) {}]);
 var initUrlCofig=function(){
     $.ajax({
         type: "GET",
@@ -29,11 +31,12 @@ var initUrlCofig=function(){
 }
 initUrlCofig();
 //ajax拉取数据
-function ajaxFun(url, method, data, callback, callbackError) {
+var ajaxFun=function(url, method, data,async, callback, callbackError) {
 
         $.ajax({
             url: url,
             type: method,
+            async: async,
             data: data || {},
             success: function (res) {
                 callback(res);
@@ -73,4 +76,5 @@ var changeConfigFun = function (str) {
             break;
     }
 };
+
 

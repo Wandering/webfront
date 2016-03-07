@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!meta charset utf="8">
+    <!--flexslider-css-->
+    <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+    <!--bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Coda:400,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+    <!--script-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myController", function ($scope, $http) {
+            $scope.message = "Hello, Angular JS.";
+        });
+    </script>
+</head>
+<body>
+<div class="header" ng-app="myApp">
+
+    <div ng-controller="myController">
+
+        <div>
+            <h2>{{message}}</h2>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
