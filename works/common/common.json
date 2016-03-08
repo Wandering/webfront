@@ -1,3 +1,4 @@
 {
-  "news":"/common/news/getDataByPage?type=1"
+  "news":"/common/news/getDataByPage?type=1",
+  "container":"/common/news/getDataByPage?type=2"
 }
