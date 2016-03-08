@@ -3,6 +3,33 @@
  */
 var app = angular.module('busApp', []);
 app.controller('IndexController', ['$scope', function($scope) {}]);
+app.controller('NewsController', ['$scope', function($scope) {
+    ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).news, "GET", {},false, function(res){
+        $scope.news=res.bizData.rows;
+        console.log(res.bizData.rows)
+    });
+
+}]);
+
+app.controller('ContainerController', ['$scope', function($scope) {
+    ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).container, "GET", {},false, function(res){
+        $scope.containers=res.bizData.rows;
+    });
+
+}]);
+
+app.controller('ourWorkController', ['$scope', function($scope) {
+    ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).ourwork, "GET", {},false, function(res){
+        $scope.ourworks=res.bizData.rows;
+    });
+
+}]);
+
+app.controller('menuController', ['$scope', function($scope,$http) {
+    ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).menu, "GET", {},false, function(res){
+        $scope.menus=res.bizData.rows;
+    });
+}]);
 var initUrlCofig=function(){
     $.ajax({
         type: "GET",
@@ -76,5 +103,7 @@ var changeConfigFun = function (str) {
             break;
     }
 };
+
+
 
 

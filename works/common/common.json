@@ -1,4 +1,6 @@
 {
   "news":"/common/news/getDataByPage?type=1",
-  "container":"/common/news/getDataByPage?type=2"
+  "container":"/common/news/getDataByPage?type=2",
+  "ourwork":"/common/news/getDataByPage?type=3",
+  "menu":"/common/news/getDataByPage?type=3"
 }
