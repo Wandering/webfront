@@ -25,8 +25,6 @@
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
-		<script src="http://libs.cdnjs.net/angular.js/2.0.0-alpha.55/angular2.min.js"></script>
-		<script src="http://libs.cdnjs.net/angular.js/2.0.0-alpha.55/http.min.js"></script>
 		<script src="lib/common.js"></script>
 
 
@@ -45,8 +43,7 @@
 		<!--fonts-->
 	</head>
 	<body ng-app="busApp" ng-controller="IndexController">
-			<div class="header" id="header"  ng-include="'header.html'">
-			</div>
+			<div class="header" id="header"  ng-include="'header.html'"></div>
 			<div class="header-banner" id="banner" ng-include="'banner.html'"></div>
 			<div class="our-work" id="our-work" ng-include="'our-work.html'">
 			</div>
@@ -63,6 +60,6 @@
 			</div>
 			</div>
 			<div class="footer" id="footer" ng-include="'footer.html'"></div>
-			<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+			<a href="#header" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	</body>
 </html>

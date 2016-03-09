@@ -25,11 +25,19 @@ app.controller('ourWorkController', ['$scope', function($scope) {
 
 }]);
 
-app.controller('menuController', ['$scope', function($scope,$http) {
+app.controller('menuController', ['$scope', function($scope) {
     ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).menu, "GET", {},false, function(res){
-        $scope.menus=res.bizData.rows;
+        $scope.menus=res.bizData;
+        console.log(res.bizData);
     });
 }]);
+//Gallery
+app.controller('GalleryController', ['$scope', function($scope) {
+    ajaxFun(JSON.parse(localStorage.getItem("urlConfig")).gallery, "GET", {},false, function(res){
+        $scope.gallerys=res.bizData.rows;
+    });
+}]);
+
 var initUrlCofig=function(){
     $.ajax({
         type: "GET",
