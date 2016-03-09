@@ -112,6 +112,3 @@ var changeConfigFun = function (str) {
     }
 };
 
-
-
-

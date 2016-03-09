@@ -13,6 +13,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<!--coustom css-->
 		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="css/map.css" rel="stylesheet" type="text/css"/>
 		<!--fonts-->
 		<link href='http://fonts.useso.com/css?family=Coda:400,800' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.useso.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
@@ -24,6 +25,9 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 		<script src="lib/common.js"></script>
+		<!--引用百度地图API-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDLZllXdW60G3vtFgXaofE5l"></script>
+
 		<!--script-->
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -41,55 +45,9 @@
 			<div class="about">
 				<h3>关于</h3>
 				<div class="container">
-					<div class="col-md-4 awrd">
-						<h4>我们使用的技术</h4>
-							<div class="awd-icn-txt">
-								<div class="col-md-3 awd-icn">
-									<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-								</div>
-								<div class="col-md-9 awd-txt">
-									<h4>css3</h4>
-									<p>CSS3是CSS技术的升级版本，CSS3语言开发是朝着模块化发展的。以前的规范作为一个模块实在是太庞大而且比较复杂，所以，把它分解为一些小的模块，更多新的模块也被加入进来。这些模块包括： 盒子模型、列表模块、超链接方式 、语言模块 、背景和边框 、文字特效 、多栏布局等。</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="awd-icn-txt">
-								<div class="col-md-3 awd-icn">
-									<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-								</div>
-								<div class="col-md-9 awd-txt">
-									<h4>html5</h4>
-									<p>html5介绍</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="awd-icn-txt">
-								<div class="col-md-3 awd-icn">
-									<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-								</div>
-								<div class="col-md-9 awd-txt">
-									<h4>bootstarp</h4>
-									<p>bootstarp介绍</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="col-md-8 wh-we">
-						<h4>Who we Are</h4>
-						<div class="col-md-4 txt0">
-							<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h5>
-							<P>Lorem Ipsum has been the industry's standard dummy text since the 1500s,
-							when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum has been the industry's standard dummy text since the 1500s,
-							when an unknown</P>
-							<button type="button" class="btn btn-info mrg">Read more</button>
-						</div>
-						<div class="col-md-8 txt0">
-							<img src="./images/office.jpg" alt="" class="img-responsive"/>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="clearfix"></div>
+					<!--百度地图容器-->
+					<div  id="baidu-map"></div>
+					<div class="clearfix" id="baidu-map-results" ></div>
 				</div>
 			</div>
 			<div class="our-team">
@@ -159,4 +117,6 @@
 	<div class="footer" id="footer" ng-include="'footer.html'"></div>
 			<a href="#header" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	</body>
+	<script type="text/javascript" src="lib/map.js"></script>
+
 </html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title>公交查询系统</title>
+		<link rel="shortcut icon" type="image/x-icon"href="/images/favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Play-Offs Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!meta charset utf="8">
+		<!--flexslider-css-->
+		<link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+		<!--bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!--coustom css-->
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<!--fonts-->
+		<link href='http://fonts.useso.com/css?family=Coda:400,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.useso.com/css?family=Jockey+One' rel='stylesheet' type='text/css'>
+		<link href='css/map.css' rel='stylesheet' type='text/css'>
+		<!--script-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<script src="lib/common.js"></script>
+
+		<!--引用百度地图API-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FDLZllXdW60G3vtFgXaofE5l"></script>
+
+
+		<!--script-->
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+		</script>
+		<!--fonts-->
+	</head>
+	<body  ng-app="busApp" ng-controller="IndexController">
+	<div class="header" id="header"  ng-include="'header.html'"></div>
+			<div class="about-page">
+			<div class="about">
+				<h3>公交查询</h3>
+				<div class="container">
+
+					<div class="clearfix">
+						<div id="baidu-map-query">
+							<form class="form-inline">
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon">起点站:</div>
+										<input type="text" class="form-control" placeholder="上车点" id="station-start">
+									</div>
+									<div class="input-group">
+										<div class="input-group-addon">终点站:</div>
+										<input type="text" class="form-control" placeholder="下车点" id="station-end">
+									</div>
+								</div>
+								<button type="submit" class="btn btn-primary" id="station-query">查询</button>
+
+								<div class="input-group">
+									<div class="input-group-addon">线路查询:</div>
+									<input type="text" class="form-control" placeholder="1路" id="station-line">
+								</div>
+								<button type="submit" class="btn btn-primary" id="line-query">线路查询</button>
+							</form>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-3 awrd" >
+						<div id="baidu-map-results">暂无匹配内容</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-9 wh-we">
+						<div id="baidu-map"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			</div>
+	<div class="footer" id="footer" ng-include="'footer.html'"></div>
+			<a href="#header" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</body>
+	<script src="lib/map.js"></script>
+</html>
